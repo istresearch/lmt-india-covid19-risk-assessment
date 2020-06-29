@@ -1,1 +1,1 @@
-git+https://github.com/istresearch/coconut
+-e git+https://github.com/istresearch/coconut#egg=coconut
