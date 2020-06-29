@@ -23,10 +23,17 @@ class LmtIndiaCovid19RiskAssessment(Survey):
 
     def _risk_dataframe(self):
         """Creates a dataframe containing information about each survey question"""
-        responses = list(self.responses_by_id.values())
-        responses = sorted(responses, key=lambda x: x.sort_order)
-        responses = [r.risk_data for r in responses if r.num_risk_factors > 0]
-        return pd.DataFrame(responses, columns=LmtIndiaCovid19Response.risk_columns)
+        rows = list(self.responses_by_id.values())
+        rows = sorted(rows, key=lambda x: x.sort_order)
+        rows = [r.data for r in rows if r.num_risk_factors > 0]
+        return pd.DataFrame(rows, columns=LmtIndiaCovid19Response.risk_columns)
+
+    def _response_dataframe(self):
+        """Creates a dataframe containing information about each survey question"""
+        rows = list(self.responses_by_id.values())
+        rows = sorted(rows, key=lambda x: x.sort_order)
+        rows = [r.data for r in rows if r.num_risk_factors > 0]
+        return pd.DataFrame(rows)
 
     @property
     def worksheets(self):
