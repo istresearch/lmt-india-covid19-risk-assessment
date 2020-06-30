@@ -4,6 +4,10 @@
 *.log
 *.pyc
 *.swp
+*.pypirc
+lmt_india_covid19_risk_assessment.egg-info/*
+build/*
+dist/*
 .coverage
 /.idea/*
 .vscode/*

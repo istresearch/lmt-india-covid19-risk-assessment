@@ -6,7 +6,7 @@ Defines survey type `LmtIndiaCovid19RiskAssessment` and response `LmtIndiaCovid1
 ## Installation
 
 ```
-pip install git+https://github.com/istresearch/lmt-india-covid19-risk-assessment
+pip install lmt-india-covid19-risk-assessment
 ```
 
 ## Usage

@@ -1,1 +1,1 @@
--e git+https://github.com/istresearch/coconut#egg=coconut
+limesurvey-coconut>=1.0.1
